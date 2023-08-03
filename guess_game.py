@@ -2,14 +2,14 @@ import random
 
 #1. 增加勝負判斷(提示猜了幾次)
 
-x =random.randint(1,50)
+x =random.randint(1,100)
 print(x)
 win = False
 count = 0
 start, end = 1, 50
 
 for i in range(5):
-    y  = eval(input('輸入(1 ~ 50)之間的一個數字：'))
+    y  = eval(input('輸入(1 ~ 100)之間的一個數字：'))
     if x == y:
         win = True
         break
