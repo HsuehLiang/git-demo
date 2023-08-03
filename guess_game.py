@@ -6,21 +6,26 @@ x =random.randint(1,50)
 print(x)
 win = False
 count = 0
+start, end = 1, 50
 
 for i in range(5):
-    y  = eval(input('請猜一個數字(1~50之間)：'))
+    y  = eval(input('輸入(1 ~ 50)之間的一個數字：'))
     if x == y:
         win = True
         break
 
     if x > y:
-        print('猜大一點')
+        if start  < y:
+            start = y
+        print(f'提示： {start} ~ {end} 之間')
     else:
-        print('猜小一點')
+        if end > y:
+            end = y
+        print(f'提示 {start} ~ {end} 之間')
     
     count += 1
 
 if win:
     print(f'恭喜過關! 共猜了{count+1}次')
 else:
-    print(f'遊戲結束! 答案為：{x}')
+    print(f'沒猜中，遊戲結束! ans：{x}')
