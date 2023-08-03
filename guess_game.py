@@ -9,7 +9,11 @@ count = 0
 start, end = 1, 50
 
 for i in range(5):
+<<<<<<< HEAD
     y  = eval(input('輸入(1 ~ 100)之間的一個數字：'))
+=======
+    y  = eval(input(f'輸入({start} ~ {end})之間的一個數字：'))
+>>>>>>> test
     if x == y:
         win = True
         break
@@ -28,4 +32,4 @@ for i in range(5):
 if win:
     print(f'恭喜過關! 共猜了{count+1}次')
 else:
-    print(f'沒猜中，遊戲結束! ans：{x}')
+    print(f'沒猜中，遊戲失敗! ans：{x}')
